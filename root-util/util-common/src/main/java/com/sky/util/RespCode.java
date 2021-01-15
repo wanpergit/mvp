@@ -3,12 +3,12 @@ package com.sky.util;
 /**
  * @Author: Ningxb
  * @Date: 2021-01-09 00:48
- * @description: ${description}
+ * @description: 用于指定响应状态码的枚举类
  */
 public enum RespCode {
     SUCCESS(20000,"操作成功"),
     ERROR(50000,"操作失败"),
-    SYSTEM_ERROR(50001,"系统错误");
+    SYSTEM_ERROR(90001,"系统错误");
 
     private Integer code;
     private String message;

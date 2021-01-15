@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sky.mapper.UserMapper">
+    <insert id="insertUser" parameterType="com.sky.pojo.User" useGeneratedKeys="true" keyProperty="id">
+      INSERT INTO USER_INFO(name,gender,age,phone_number,email,avatar,job_type,state,city,crtdate,upddate)
+      VALUES (#{name},#{gender},#{age},#{phoneNumber},#{email},#{avatar},#{jobType},#{state},#{city},CURRENT_TIMESTAMP ,CURRENT_TIMESTAMP )
+    </insert>
+</mapper>

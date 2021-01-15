@@ -12,6 +12,7 @@
     <modules>
         <module>service-dependency</module>
         <module>util-common</module>
+        <module>consum-dependency</module>
     </modules>
     <artifactId>root-util</artifactId>
     <description>所有工具工程的父工程</description>

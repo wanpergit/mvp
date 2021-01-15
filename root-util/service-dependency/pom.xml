@@ -22,11 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- mybatis plus -->
+        <!-- mybatis-->
         <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.1</version>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.1.4</version>
         </dependency>
         <!-- mysql -->
         <dependency>
@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
-            <version>1.1.24</version>
+            <version>1.1.22</version>
         </dependency>
         <!--dubbo -->
         <dependency>
@@ -45,11 +45,7 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <version>2.7.8</version>
         </dependency>
-        <!--<dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>2.7.8</version>
-        </dependency>-->
+
         <!-- nacos -->
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
@@ -77,5 +73,6 @@
                 </exclusion>
             </exclusions>-->
         </dependency>
+
     </dependencies>
 </project>

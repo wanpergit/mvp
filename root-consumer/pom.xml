@@ -16,10 +16,9 @@
     <description>消费者工程</description>
 
     <dependencies>
-        <!-- jar包依赖 -->
         <dependency>
             <groupId>com.mvp</groupId>
-            <artifactId>service-dependency</artifactId>
+            <artifactId>consum-dependency</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <!-- 工具包依赖-->
@@ -28,5 +27,6 @@
             <artifactId>util-common</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 </project>

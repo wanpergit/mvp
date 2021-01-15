@@ -9,6 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+    <modules>
+        <module>web-pc</module>
+    </modules>
     <artifactId>root-web</artifactId>
     <description>管理所有涉及页面渲染的工程</description>
 

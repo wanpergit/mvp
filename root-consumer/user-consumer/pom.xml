@@ -12,12 +12,14 @@
     <artifactId>user-consumer</artifactId>
 
     <dependencies>
+
         <!-- api 依赖 -->
         <dependency>
             <groupId>com.mvp</groupId>
             <artifactId>user-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
     </dependencies>
 
     <build>

@@ -15,4 +15,13 @@
     <artifactId>root-api</artifactId>
     <description>所有数据库表对应的bean及api接口</description>
 
+    <dependencies>
+        <!-- 异常依赖-->
+        <dependency>
+            <groupId>com.mvp</groupId>
+            <artifactId>root-exception</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 </project>

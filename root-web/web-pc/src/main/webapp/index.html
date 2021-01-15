@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>综合平台</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/faker/faker.js"></script>
+</head>
+<body>
+ index page !
+
+<script>
+    /*$.get("http://localhost:8088/user/single",function(data){
+        console.log("Data : " + data);
+    });*/
+
+    var random = function(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+    var initFaker = function () {
+        //faker.setLocale("zh_CN");//默认英文
+        faker.locale = "zh_CN";
+    }
+    var createUser = function () {
+        var obj = {};
+        obj.name = faker.name.lastName()+faker.name.firstName();
+        obj.gender = random(0,2);
+        //obj.gender = faker.name.gender();
+        obj.age = random(15,80);
+        faker.phone.phoneNumberFormat(3);
+        obj.phoneNumber = faker.phone.phoneNumber();
+        obj.email = faker.finance.account()+faker.internet.email();
+        obj.avatar = faker.image.avatar();
+        obj.jobType = faker.name.jobType();
+        obj.state = faker.address.state();
+        obj.city = faker.address.city();
+        obj.crtdate = "";
+        obj.upddate = "";
+        return JSON.stringify(obj);
+    }
+
+    var postUser = function(){
+
+        var user = createUser();
+        //console.log(user);
+
+        /*$.post("http://localhost:8088/user",user,function(data,status,xhr){
+            console.log("Data Loaded: " + data);
+        },"json")*/
+
+
+       $.ajax({
+            //请求方式
+            type : "POST",
+            //请求的媒体类型
+            contentType: "application/json;charset=UTF-8",
+            //请求地址
+            url : "http://localhost:8088/user",
+            //数据，json字符串
+            data : user,
+            //请求成功
+            success : function(result) {
+                console.log(result);
+            },
+            //请求失败，包含具体的错误信息
+            error : function(e){
+                console.log(e.status);
+                console.log(e.responseText);
+            }
+        });
+    }
+
+    initFaker();
+    setInterval(function(){
+        postUser();
+    }, 50);
+
+</script>
+</body>
+</html>

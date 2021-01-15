@@ -1,5 +1,4 @@
 package com.sky;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -14,3 +13,4 @@ public class UserServiceApp {
         SpringApplication.run(UserServiceApp.class, args);
     }
 }
+

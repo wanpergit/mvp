@@ -9,6 +9,7 @@
 		<module>root-util</module>
 		<module>root-web</module>
 		<module>root-consumer</module>
+		<module>root-exception</module>
 	</modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,6 +25,8 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<dependencies>
